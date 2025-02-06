@@ -1,0 +1,195 @@
+// RESET CSS
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+// GENERAL
+body {
+    background-color: rgb(255, 255, 255);
+	overflow-y: scroll;
+}
+
+// HEADER
+header {
+	nav {
+		position: fixed;
+		top: 20px;
+		right: 20px;
+		z-index: 999;
+		button {
+			border-radius: 10px;
+			padding: 5px 20px;
+			border: none;
+			background-color: rgb(211, 211, 211);
+			cursor: pointer;
+		}
+	}
+}
+
+// MAIN CONTENT
+#content {
+	padding: 60px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	.main-title {
+		font-size: 60px;
+		margin-bottom: 20px;
+	}
+    .main-image {
+		width: 100%;
+        img {
+           height: 600px;
+		   width: 100%;
+		   object-fit: cover;
+		   border-radius: 20px;
+        }
+    }
+	.main-description {
+		font-size: 20px;
+		margin-top: 40px;
+	}
+}
+
+// MENU PAGE CONTENT
+#content {
+	.display-title-container {
+		h1 {
+			font-size: 60px;
+			margin-bottom: 20px;
+		}
+	}
+	.menu-container {
+		width: 100%;
+		grid: 20px;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+		row-gap: 20px;
+		.item-box {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			.image-box {
+				img {
+					width: 450px;
+					height: 450px;
+					object-fit: cover;
+					border-radius: 20px;
+				}
+			}
+			.title-box {
+				p {
+					font-size: 30px;
+				}
+			}
+			.description-box {
+				p {
+					font-size: 17px;
+				}
+			}
+			.price-box {
+				position: absolute;
+				top: 10px;
+				right: 30px;
+				font-size: 30px;
+				background-color: rgb(255, 255, 255);
+				height: 60px;
+				width: 60px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 60px;
+			}
+		}
+	}
+}
+
+// CONTACTPAGE
+#content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.contact-title-container {
+		h1 {
+			font-size: 60px;
+			margin-bottom: 20px;
+		}
+	}
+	.contact-container {
+		display: flex;
+		flex-direction: column;
+		width: 300px;
+		input {
+			height: 25px;
+			border-radius: 10px;
+			border: 0;
+			background-color: rgb(211, 211, 211);
+			margin-bottom: 20px;
+		}
+		#submit {
+			background-color: black;
+			color: white;
+			height: 35px;
+		}
+	}
+}
+
+
+// FOOTER
+#main-footer {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	p {
+		font-size: 15px;
+	}
+	z-index: 999;
+}
